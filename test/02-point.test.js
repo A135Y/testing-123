@@ -6,7 +6,22 @@ test('should assing x and y co-ordinates correctly', () => {
     expect (p1.y).toBe(7)
 })
 
-// test('should move points  correctly', ()=>{
-//     const p2 = new Point(3,9)
-//     expect (p2.move(2,5)).toBe(5,14)
-// })
+
+test('should move points  correctly', ()=>{
+     const p2 = new Point(3,9)
+     p2.move(2,5)
+     expect (p2).toEqual({x:5, y:14})
+ })
+
+ test('should reflect points  correctly', ()=>{
+    const p2 = new Point(3,9)
+    p2.reflect()
+    expect ([p2.x,p2.y]).toEqual([9, 3])
+})
+
+
+test('should stretch points  correctly', ()=>{
+    const p2 = new Point(3,9)
+    p2.stretch(3)
+    expect ([p2.x,p2.y]).toEqual([9,27])
+})

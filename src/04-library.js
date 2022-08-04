@@ -20,7 +20,8 @@ class User {
 
   updateUsername (newUsername, password) {
     if (password !== this.password) return
-    this.username = newUsername
+    
+    return this.username = newUsername
   }
 
   checkoutBook (book) {
@@ -36,3 +37,7 @@ class User {
   }
 
 }
+
+
+module.exports = {Book, User}
+
